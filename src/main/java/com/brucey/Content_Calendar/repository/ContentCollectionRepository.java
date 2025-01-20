@@ -27,11 +27,11 @@ public class ContentCollectionRepository {
     }
     @PostConstruct
     private void init() {
-        Content c = new Content(  1,
-                   "My First Blog Post",
-                  "My First Blog Post",
-                   Status.IDEA,
-                   Type.ARTICLE,
+        Content c = new Content(  2,
+                   "Clear me @ 18",
+                  "I am cleared",
+                   Status.IN_PROGRESS,
+                   Type.CONFERENCE_TALK,
                    LocalDateTime.now(),
                    null,
                    "");
