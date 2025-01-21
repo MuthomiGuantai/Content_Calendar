@@ -1,0 +1,66 @@
+### find all content
+GET http://localhost:8080/api/content
+
+
+### get content by id
+GET http://localhost:8080/api/content/{{id}}
+
+### create new content
+POST http://localhost:8080/api/content
+Content-Type: application/json
+
+{
+  "id": 1,
+  "title": "",
+  "desc": "My Second blog post",
+  "status": "IDEA",
+  "contentType": "ARTICLE",
+  "dateCreated": "2023-02-13T10:25:02.838496",
+  "dateUpdated": null,
+  "url": ""
+}
+
+### updating existing content
+PUT http://localhost:8080/api/content/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "title": "MY FIRST POST!!!",
+  "desc": "MY FIRST POST!!!",
+  "status": "IDEA",
+  "contentType": "ARTICLE",
+  "dateCreated": "2023-02-13T10:25:02.838496",
+  "dateUpdated": "2023-02-13T10:25:02.838496",
+  "url": "http://localhost:8080/my-first-blog-post"
+}
+
+### updating existing content with invalid id
+PUT http://localhost:8080/api/content/99
+Content-Type: application/json
+
+{
+  "id": 1,
+  "title": "MY FIRST POST!!!",
+  "desc": "MY FIRST POST!!!",
+  "status": "IDEA",
+  "contentType": "ARTICLE",
+  "dateCreated": "2023-02-13T10:25:02.838496",
+  "dateUpdated": "2023-02-13T10:25:02.838496",
+  "url": "http://localhost:8080/my-first-blog-post"
+}
+
+### delete by id
+DELETE http://localhost:8080/api/content/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "title": "MY FIRST POST!!!",
+  "desc": "MY FIRST POST!!!",
+  "status": "IDEA",
+  "contentType": "ARTICLE",
+  "dateCreated": "2023-02-13T10:25:02.838496",
+  "dateUpdated": "2023-02-13T10:25:02.838496",
+  "url": "http://localhost:8080/my-first-blog-post"
+}
