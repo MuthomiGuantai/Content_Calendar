@@ -10,7 +10,7 @@ POST http://localhost:8080/api/content
 Content-Type: application/json
 
 {
-  "id": 1,
+  "id": 2,
   "title": "",
   "desc": "My Second blog post",
   "status": "IDEA",
@@ -25,7 +25,7 @@ PUT http://localhost:8080/api/content/1
 Content-Type: application/json
 
 {
-  "id": 1,
+  "id": 2,
   "title": "MY FIRST POST!!!",
   "desc": "MY FIRST POST!!!",
   "status": "IDEA",

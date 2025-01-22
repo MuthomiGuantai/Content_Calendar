@@ -1,9 +1,12 @@
 package com.brucey.Content_Calendar.model;
 
+import jakarta.validation.constraints.NotEmpty;
+
 import java.time.LocalDateTime;
 
 public record Content(
     Integer id,
+    @NotEmpty
     String title,
     String desc,
     Status status,
