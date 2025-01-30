@@ -11,21 +11,6 @@ Content-Type: application/json
 
 {
   "id": 1,
-  "title": "",
-  "desc": "My Second blog post",
-  "status": "IDEA",
-  "contentType": "ARTICLE",
-  "dateCreated": "2023-02-13T10:25:02.838496",
-  "dateUpdated": null,
-  "url": ""
-}
-
-### updating existing content
-PUT http://localhost:8080/api/content/1
-Content-Type: application/json
-
-{
-  "id": 1,
   "title": "MY FIRST POST!!!",
   "desc": "MY FIRST POST!!!",
   "status": "IDEA",
@@ -35,8 +20,23 @@ Content-Type: application/json
   "url": "http://localhost:8080/my-first-blog-post"
 }
 
+### updating existing content
+PUT http://localhost:8080/api/content/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "title": "First off",
+  "desc": "My Second blog post",
+  "status": "IDEA",
+  "contentType": "ARTICLE",
+  "dateCreated": "2023-02-13T10:25:02.838496",
+  "dateUpdated": "http://localhost:8080/my-first-blog-post",
+  "url": "http://localhost:8080/my-first-blog-post"
+}
+
 ### updating existing content with invalid id
-PUT http://localhost:8080/api/content/99
+PUT http://localhost:8080/api/content/1
 Content-Type: application/json
 
 {
